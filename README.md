@@ -1,4 +1,4 @@
-## :rocket: CovidTracker
+## :earth_africa: CovidTracker
 
 ![CovidTracker](https://i.imgur.com/AVdgIFJ.png)
 
