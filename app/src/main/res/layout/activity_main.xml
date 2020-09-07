@@ -7,8 +7,22 @@
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:text="Last update: 06/09/2020"
+        android:fontFamily="@font/montserratregular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+    </TextView>
+
     <RelativeLayout
         android:id="@+id/cases"
+        android:layout_below="@+id/last_update"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginHorizontal="30dp"
@@ -61,62 +75,8 @@
 
 
     <RelativeLayout
-        android:id="@+id/suspected_cases"
-        android:layout_below="@+id/cases"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/bg_rect"
-        android:elevation="3dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="10dp">
-
-            <TextView
-                android:id="@+id/text_suspected_cases"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Suspected cases"
-                android:textColor="#CDCC61"
-                android:fontFamily="@font/montserratsemibold">
-
-            </TextView>
-
-            <ImageView
-                android:layout_below="@+id/text_suspected_cases"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/question_shield_150px">
-
-            </ImageView>
-
-            <TextView
-                android:id="@+id/num_suspected_cases"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="15465"
-                android:textColor="#CDCC61"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:fontFamily="@font/montserratregular">
-
-            </TextView>
-
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
         android:id="@+id/confirmed_cases"
-        android:layout_below="@+id/suspected_cases"
+        android:layout_below="@+id/cases"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginHorizontal="30dp"
@@ -158,6 +118,19 @@
                 android:textColor="#E3AD49"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/today_cases"
+                android:layout_above="@+id/num_confirmed_cases"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E3AD49"
+                android:text="+30"
+                android:textSize="15sp"
                 android:fontFamily="@font/montserratregular">
 
             </TextView>
@@ -216,6 +189,19 @@
 
             </TextView>
 
+            <TextView
+                android:id="@+id/today_deaths"
+                android:layout_above="@+id/num_deaths"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9A262B"
+                android:text="+30"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
 
         </RelativeLayout>
 
@@ -270,9 +256,32 @@
 
             </TextView>
 
+            <TextView
+                android:id="@+id/today_recovered"
+                android:layout_above="@+id/num_recovered"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4E6729"
+                android:text="+30"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
 
         </RelativeLayout>
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:progressDrawable="@drawable/circle">
+
+    </ProgressBar>
 
 </RelativeLayout>
