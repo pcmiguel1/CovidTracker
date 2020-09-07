@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView numCases, numConfirmed, numDeaths, numRecovered, todayCases, todayDeaths, todayRecovered, lastUpdate;
     private ProgressBar progressBar;
 
-    private ArrayList<CovidCountry> covidInfo;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
