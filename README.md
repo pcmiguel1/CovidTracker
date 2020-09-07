@@ -1,6 +1,6 @@
 ## :earth_africa: CovidTracker
 
-![CovidTracker](https://i.imgur.com/AVdgIFJ.png)
+![CovidTracker](https://i.imgur.com/L1rbJT9.png)
 
 
 ## Framework
