@@ -1,18 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/cases"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/bg_rect"
+        android:elevation="3dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:id="@+id/text_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Cases"
+                android:textColor="#DADA96"
+                android:fontFamily="@font/montserratsemibold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_below="@+id/text_cases"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/virus_150px">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/num_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="15465"
+                android:textColor="#DADA96"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/suspected_cases"
+        android:layout_below="@+id/cases"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_rect"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:id="@+id/text_suspected_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Suspected cases"
+                android:textColor="#CDCC61"
+                android:fontFamily="@font/montserratsemibold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_below="@+id/text_suspected_cases"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/question_shield_150px">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/num_suspected_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="15465"
+                android:textColor="#CDCC61"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/confirmed_cases"
+        android:layout_below="@+id/suspected_cases"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_rect"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:id="@+id/text_confirmed_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Confirmed cases"
+                android:textColor="#E3AD49"
+                android:fontFamily="@font/montserratsemibold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_below="@+id/text_confirmed_cases"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/checked_150px">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/num_confirmed_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="15465"
+                android:textColor="#E3AD49"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/deaths"
+        android:layout_below="@+id/confirmed_cases"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_rect"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:id="@+id/text_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Deaths"
+                android:textColor="#9A262B"
+                android:fontFamily="@font/montserratsemibold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_below="@+id/text_deaths"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/poison_150px">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/num_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="15465"
+                android:textColor="#9A262B"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/recovered"
+        android:layout_below="@+id/deaths"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_rect"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:id="@+id/text_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Recovered"
+                android:textColor="#4E6729"
+                android:fontFamily="@font/montserratsemibold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_below="@+id/text_recovered"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/heart_health_150px">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/num_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="15465"
+                android:textColor="#4E6729"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserratregular">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
